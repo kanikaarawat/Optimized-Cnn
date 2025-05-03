@@ -1,18 +1,22 @@
-<h1>Copy Move Forgery Detection using Optimized Cnn</h1>
 
-<p>This project implements a Convolutional Neural Network (CNN) to classify images from the MISD dataset using TensorFlow/Keras. It also incorporates hyperparameter tuning with Keras Tuner to optimize model performance.</p>
+# Copy Move Forgery Detection using Optimized CNN
 
-<h2>📁 Dataset</h2>
-<p>The dataset used is called MISD, which appears to contain multiple categories of image data such as:</p>
-<ul>
-  <li>Au_ani</li>
-  <li>Au_art</li>
-  <li>Au_com</li>
-  <li>... (and other classes)</li>
-</ul>
+This project implements a Convolutional Neural Network (CNN) to classify images from the MISD dataset using TensorFlow/Keras. It also incorporates hyperparameter tuning with Keras Tuner to optimize model performance.
 
-<p>Ensure you have a ZIP file of the dataset named <code>MISD.zip</code> structured as:</p>
-<pre><code>/MISD/
+## 📁 Dataset
+
+The dataset used is called **MISD**, which contains multiple categories of image data such as:
+
+- Au_ani
+- Au_art
+- Au_com
+- ... (and other classes)
+
+Ensure you have a ZIP file of the dataset named `MISD.zip` structured as follows:
+
+```
+
+/MISD/
 ├── train/
 │   ├── class1/
 │   └── class2/
@@ -20,53 +24,62 @@
 │   ├── class1/
 │   └── class2/
 └── test/
-    ├── class1/
-    └── class2/
-</code></pre>
+├── class1/
+└── class2/
 
-<h2>🚀 Features</h2>
-<ul>
-  <li>Image classification using CNN</li>
-  <li>Hyperparameter tuning with Keras Tuner</li>
-  <li>Evaluation on validation/test sets</li>
-  <li>Option to extend for data augmentation or transfer learning</li>
-</ul>
+````
 
-<h2>🛠️ Installation</h2>
-<p>Clone the repository and install required dependencies:</p>
-<pre><code>git clone https://github.com/yourusername/misd-image-classification.git
+## 🚀 Features
+
+- Image classification using CNN
+- Hyperparameter tuning with Keras Tuner
+- Evaluation on validation/test sets
+- Option to extend for data augmentation or transfer learning
+
+## 🛠️ Installation
+
+Clone the repository and install required dependencies:
+
+```bash
+git clone https://github.com/yourusername/misd-image-classification.git
 cd misd-image-classification
-pip install -r requirements.txt</code></pre>
+pip install -r requirements.txt
+````
 
-<p>In Google Colab, you can also install Keras Tuner directly:</p>
-<pre><code>!pip install keras-tuner</code></pre>
+In Google Colab, you can also install Keras Tuner directly:
 
-<h2>📌 Usage</h2>
-<ol>
-  <li>Upload your dataset (<code>MISD.zip</code>) to the Colab environment.</li>
-  <li>Extract it using:
-    <pre><code>!unzip -o /content/MISD.zip -d /content/MISD</code></pre>
-  </li>
-  <li>Load and preprocess the data using <code>ImageDataGenerator</code> or <code>tf.data</code>.</li>
-  <li>Build and compile the CNN model.</li>
-  <li>Use Keras Tuner for hyperparameter tuning.</li>
-  <li>Train and evaluate the model.</li>
-</ol>
+```bash
+!pip install keras-tuner
+```
 
-<h2>📊 Results</h2>
-<p>The best model achieved approximately <strong>X%</strong> accuracy on the test dataset after tuning. (Update this after running experiments.)</p>
+## 📌 Usage
 
-<h2>📎 Dependencies</h2>
-<ul>
-  <li>Python 3.x</li>
-  <li>TensorFlow ≥ 2.x</li>
-  <li>Keras Tuner</li>
-  <li>NumPy</li>
-  <li>Matplotlib (optional for visualizations)</li>
-</ul>
+1. Upload your dataset (`MISD.zip`) to the Colab environment.
+2. Extract it using:
 
-<h2>📚 License</h2>
-<p>This project is licensed under the MIT License. See the <code>LICENSE</code> file for more info.</p>
+   ```bash
+   !unzip -o /content/MISD.zip -d /content/MISD
+   ```
+3. Load and preprocess the data using `ImageDataGenerator` or `tf.data`.
+4. Build and compile the CNN model.
+5. Use Keras Tuner for hyperparameter tuning.
+6. Train and evaluate the model.
 
-<h2>🤝 Contributing</h2>
-<p>Pull requests are welcome. For major changes, please open an issue first to discuss what you'd like to change.</p>
+## 📊 Results
+
+The best model achieved approximately **68% accuracy** on the test dataset after tuning. (Update this after running experiments.)
+
+### Test Accuracy on MISD dataset: 0.6811
+
+### Classification Report for MISD dataset:
+
+```
+              precision    recall  f1-score   support
+
+           0       0.69      0.96      0.80       124
+           1       0.58      0.11      0.19        61
+
+    accuracy                           0.68       185
+   macro avg       0.64      0.54      0.50       185
+weighted avg       0.65      0.
+```
