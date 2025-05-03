@@ -1,4 +1,4 @@
-<h1>MISD Image Classification with CNN and Keras Tuner</h1>
+<h1>Copy Move Forgery Detection using Optimized Cnn</h1>
 
 <p>This project implements a Convolutional Neural Network (CNN) to classify images from the MISD dataset using TensorFlow/Keras. It also incorporates hyperparameter tuning with Keras Tuner to optimize model performance.</p>
 
